@@ -1,13 +1,16 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import styles from "./Hero.module.css";
 
 export const Hero = () => {
   return (
     <section className={styles.section}>
-        <img
+        <Image
+          width={350}
+          height={350}
           src="/Images/PicCv.jpg"
           alt="picprofile"
           className={styles.image}
