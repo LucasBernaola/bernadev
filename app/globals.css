@@ -1,7 +1,10 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 :root {
-  --background: #020245;
+  --background: #21496e;
   --foreground: #ffffff;
-  --primary-color: #0808f0;
+  --primary-color: #0077b5;
   --font-quicksand: "Quicksand", sans-serif;
   --font-roboto: "Roboto_condensed";
 
@@ -9,8 +12,6 @@
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 }
-
-
 
 html,
 body {

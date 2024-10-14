@@ -1,40 +1,25 @@
-"use client";
+'use client';
 
 import React from "react";
-import Image from "next/image";
-import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
+import ProfileCard from "../ui/ProfileCard/ProfileCard";
 
 export const Hero = () => {
   return (
-    <section className={styles.section}>
-        <Image
-          width={350}
-          height={350}
-          src="/Images/PicCv.jpg"
-          alt="picprofile"
-          className={styles.image}
-        />
-        <div className={styles.textContainer}>
-          <h1 className={styles.h1}>
-            Hi I’m Lucas,{" "}
-            <span style={{ color: "#0808f0" }}>
-              <Typewriter
-                words={["Frontend Developer"]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={150}
-                deleteSpeed={150}
-                delaySpeed={1000}
-              />
-            </span>
-          </h1>
-          <p className={styles.p}>
-            I am passionate about development and putting ideas on the screen
-          </p>
-        </div>
-        
-    </section>
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={styles.section}
+    >
+      <ProfileCard />
+      <div className={styles.textContainer}>
+        <p className={styles.p}>
+          I am passionate about development and putting ideas on the screen
+        </p>
+      </div>
+    </motion.section>
   );
 };
+
