@@ -10,7 +10,7 @@ const ProfileCard = () => {
       <Image
         width={350}
         height={350}
-        src="/Images/PicCv.jpg"
+        src="/images/PicCv.jpg"
         alt="Profile Picture"
         loading="lazy"
         className={styles.image}
