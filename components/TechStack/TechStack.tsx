@@ -46,7 +46,7 @@ const technologies: Technology[] = [
   },
   {
     name: "Python",
-    icon: "/images/Python.svg",
+    icon: "/images/python.svg",
     description: "Python is a popular programming language known for its readability and efficiency.",
     link: "https://www.python.org/",
   },
