@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Hero } from "@/components/Hero/Hero";
 import TechStack from "@/components/TechStack/TechStack";
 import Loader from "@/components/ui/Loader/Loader";
-
+import MyProjects from "@/components/MyProjects/MyProjects";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +25,7 @@ export default function Home() {
         <>
           <Hero />
           <TechStack />
+          <MyProjects />
         </>
       )}
     </div>
