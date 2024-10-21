@@ -15,99 +15,96 @@
 .cardContainer {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Espacio entre las cards */
+  gap: 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px; /* Añadir padding al contenedor */
-}
-
-.card {
-  display: flex;
-  background-color: var(--background);
-  align-items: center;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s; /* Añadir transición de sombra */
-  position: relative;
-  text-decoration: none; /* Elimina el subrayado en enlaces */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
-}
-
-.card:hover {
-  transform: translateY(-10px); /* Elevar la tarjeta al pasar el ratón */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
-}
-
-.imageContainer {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  width: 40%; /* Ajustar tamaño de la imagen */
-}
-
-.projectImage {
-  width: 100%;
-  height: auto; /* Ajustar a auto para que sea responsivo */
-  object-fit: cover;
-}
-
-.textContainer {
-  padding: 20px; /* Padding interno para el texto */
-  width: 60%; /* Ajustar según el tamaño deseado */
-}
-
-.cardTitle {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.cardDescription {
-  color: white;
-  font-size: 1rem;
-}
-
-/* Estilo para alternar la imagen a la izquierda o derecha */
-.left {
-  flex-direction: row; /* Imagen a la izquierda */
-}
-
-.right {
-  flex-direction: row-reverse; /* Imagen a la derecha */
-}
-
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-  .cardContainer {
-    padding: 0 10px; /* Menos padding en pantallas pequeñas */
-  }
+  padding: 0 20px;
 
   .card {
-    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    display: flex;
+    background-color: var(--background);
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    text-decoration: none;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
 
   .imageContainer {
-    width: 100%; /* Imagen ocupa el ancho completo */
-    height: 200px; /* Altura fija para la imagen */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 40%;
+  }
+
+  .projectImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .textContainer {
-    width: 100%; /* Texto ocupa el ancho completo */
+    padding: 20px;
+    width: 60%;
   }
 
   .cardTitle {
-    font-size: 1.25rem; /* Reducir tamaño de título */
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
   }
 
   .cardDescription {
-    font-size: 0.9rem; /* Reducir tamaño de descripción */
+    color: white;
+    font-size: 1rem;
+  }
+
+  .left {
+    flex-direction: row;
+  }
+
+  .right {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 768px) {
+    .cardContainer {
+      padding: 0 10px;
+    }
+
+    .card {
+      flex-direction: column;
+    }
+
+    .imageContainer {
+      width: 100%;
+      height: 200px;
+    }
+
+    .textContainer {
+      width: 100%;
+    }
+
+    .cardTitle {
+      font-size: 1.25rem;
+    }
+
+    .cardDescription {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2rem;
+    }
   }
 }
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 2rem; /* Ajustar tamaño de título para pantallas muy pequeñas */
-  }
-}
-

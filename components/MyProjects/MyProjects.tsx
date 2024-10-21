@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import styles from './MyProjects.module.css';
+import React from "react";
+import Image from "next/image";
+import styles from "./MyProjects.module.css";
 
 const projects = [
   {
@@ -34,7 +34,7 @@ const projects = [
 const MyProjects: React.FC = () => {
   return (
     <div className={styles.projectsSection}>
-      <h2 className={styles.title}>MyProjects</h2>
+      <h2 className={styles.title}>My Projects</h2>
       <div className={styles.cardContainer}>
         {projects.map((project, index) => (
           <a
@@ -42,14 +42,16 @@ const MyProjects: React.FC = () => {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.card} ${index % 2 === 0 ? styles.left : styles.right}`}
+            className={`${styles.card} ${
+              index % 2 === 0 ? styles.left : styles.right
+            }`}
           >
             <div className={styles.imageContainer}>
               <Image
                 src={project.image}
                 alt={`${project.title} thumbnail`}
-                width={400} // Ajusta el ancho según sea necesario
-                height={200} // Ajusta la altura según sea necesario
+                width={400}
+                height={200}
                 className={styles.projectImage}
               />
             </div>
@@ -65,7 +67,3 @@ const MyProjects: React.FC = () => {
 };
 
 export default MyProjects;
-
-
-
-

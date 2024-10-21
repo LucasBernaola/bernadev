@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero/Hero";
 import TechStack from "@/components/TechStack/TechStack";
 import Loader from "@/components/ui/Loader/Loader";
 import MyProjects from "@/components/MyProjects/MyProjects";
+import OtherTools from "@/components/OtherTools/OtherTools";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +27,7 @@ export default function Home() {
           <Hero />
           <TechStack />
           <MyProjects />
+          <OtherTools />
         </>
       )}
     </div>
