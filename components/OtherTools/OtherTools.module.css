@@ -1,13 +1,13 @@
 .toolsSection {
   padding: 40px;
   text-align: center;
-  background-color: var(--primary-color);
+  background: linear-gradient(to bottom, #21496e, #0077b5);
 }
 
 .title {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: var(--background);
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -36,7 +36,7 @@
 .toolName {
   margin-top: 10px;
   font-size: 1.3rem;
-  color: var(--background-color);
+  color: #ffff;
   text-shadow: 4px 4px 7px var(--background);
 }
 
