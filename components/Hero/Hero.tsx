@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -16,10 +16,10 @@ export const Hero = () => {
       <ProfileCard />
       <div className={styles.textContainer}>
         <p className={styles.p}>
-          I am passionate about development and putting ideas on the screen
+          I am passionate about bringing ideas to life through innovative and
+          engaging web development.
         </p>
       </div>
     </motion.section>
   );
 };
-
