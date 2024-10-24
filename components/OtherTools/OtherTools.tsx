@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './OtherTools.module.css';
+import Image from 'next/image';
 
 const tools = [
   { name: "HTML5", icon: "/images/html5.svg" },
@@ -35,7 +36,7 @@ const OtherTools: React.FC = () => {
       <div className={styles.toolsContainer}>
         {tools.map((tool, index) => (
           <div key={index} className={styles.tool}>
-            <img src={tool.icon} alt={`${tool.name} icon`} className={styles.icon} />
+            <Image src={tool.icon} alt={`${tool.name} icon`} className={styles.icon} width={60} height={60}/>
             <p className={styles.toolName}>{tool.name}</p>
           </div>
         ))}

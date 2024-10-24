@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import styles from "./footer.module.css";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,27 @@ const Footer: React.FC = () => {
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [buttonMessage, setButtonMessage] = useState("Send");
+  const [buttonClass, setButtonClass] = useState(styles.button);
+
+  useEffect(() => {
+    if (isFormSubmitted) {
+      setButtonMessage("Message sent!");
+      setButtonClass(`${styles.button} ${styles.success}`);
+      const timer = setTimeout(() => {
+        setButtonMessage("Send");
+        setButtonClass(styles.button);
+        setIsFormSubmitted(false);
+        setFormData({
+          from_name: "",
+          message: "",
+          email_id: "",
+        });
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isFormSubmitted]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,7 +45,6 @@ const Footer: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Enviar el formulario usando emailjs
     emailjs
       .sendForm(
         "default_service",
@@ -32,27 +53,14 @@ const Footer: React.FC = () => {
         "13L_7w0A9MXcfFarO"
       )
       .then(
-        (result) => {
-          alert("Message sent successfully!");
-          setIsFormSubmitted(true); // Establecer el estado de envío del formulario
+        () => {
+          setIsFormSubmitted(true);
         },
         (error) => {
           alert("Error sending message: " + JSON.stringify(error));
         }
       );
   };
-
-  // Efecto para restablecer el estado del formulario después de enviar
-  useEffect(() => {
-    if (isFormSubmitted) {
-      setFormData({
-        from_name: "",
-        message: "",
-        email_id: "",
-      });
-      setIsFormSubmitted(false); // Restablecer el flag
-    }
-  }, [isFormSubmitted]); // Solo se ejecuta cuando isFormSubmitted cambia
 
   return (
     <footer className={styles.footer}>
@@ -103,10 +111,32 @@ const Footer: React.FC = () => {
         <input
           type="submit"
           id="button"
-          value="Send"
-          className={styles.button}
+          value={buttonMessage}
+          className={buttonClass}
         />
       </form>
+      <div className={styles.footerBottom}>
+        <div className={styles.icons}>
+          <a
+            href="https://www.linkedin.com/in/lucas-bernaola/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className={styles.icon} />
+          </a>
+          <a
+            href="https://github.com/LucasBernaola"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className={styles.icon} />
+          </a>
+          <a href="/cv.pdf" download className={styles.downloadButton}>
+            Download CV
+          </a>
+        </div>
+        <div className={styles.copyright}>© Lucas Bernaola 2024</div>
+      </div>
     </footer>
   );
 };
