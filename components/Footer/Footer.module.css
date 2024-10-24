@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   position: relative;
   text-align: center;
+  padding: 10px;
 }
 
 .footer::before {
@@ -36,7 +37,7 @@
 .h3 {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #229cde;
+  color: #228ec8;
   font-weight: bold;
 }
 
@@ -53,6 +54,7 @@
   padding: 10px 20px;
   background-color: var(--primary-color);
   color: white;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -66,8 +68,9 @@
 }
 
 .success {
-  background-color: #28a745;
+  background-color: #28d1b5;
   color: white;
+  font-weight: bold;
   animation: fillEffect 0.5s forwards;
 }
 

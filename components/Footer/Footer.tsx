@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
-import styles from "./footer.module.css";
+import styles from "./Footer.module.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer: React.FC = () => {
