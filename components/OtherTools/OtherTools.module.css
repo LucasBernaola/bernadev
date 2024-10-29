@@ -56,11 +56,18 @@
   .tool {
     width: calc(100% / 6 - 40px);
   }
+
+  .toolName {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 900px) {
   .tool {
     width: calc(100% / 6 - 40px);
+  }
+  .toolName {
+    font-size: 0.95rem;
   }
 }
 
@@ -68,10 +75,16 @@
   .tool {
     width: calc(100% / 6 - 20px);
   }
+  .toolName {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 480px) {
   .tool {
     width: calc(100% / 4 - 20px);
+  }
+  .toolName {
+    font-size: 0.95rem;
   }
 }

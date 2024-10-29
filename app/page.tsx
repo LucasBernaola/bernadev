@@ -8,6 +8,7 @@ import Loader from "@/components/ui/Loader/Loader";
 import MyProjects from "@/components/MyProjects/MyProjects";
 import OtherTools from "@/components/OtherTools/OtherTools";
 import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ export default function Home() {
         <Loader /> 
       ) : (
         <>
+          <Navbar />
           <Hero />
           <TechStack />
           <MyProjects />

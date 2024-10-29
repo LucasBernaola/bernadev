@@ -4,6 +4,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url('/images/load.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .spinner {
@@ -13,6 +18,7 @@
   width: 60px;
   height: 60px;
   animation: spin 1s linear infinite;
+  position: absolute;
 }
 
 @keyframes spin {
