@@ -1,0 +1,110 @@
+.timeline {
+  content: "";
+  position: relative;
+  background: white;
+  width: 1px;
+  height: 50cap;
+  left: 50%;
+}
+
+.child {
+  position: relative;
+  margin: 20px;
+  opacity: 0;
+}
+
+.odd {
+  float: left;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0px 20px 20px 20px;
+}
+.odd::before {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  left: -30px;
+}
+.odd::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 2px;
+  left: -10px;
+  top: 10px;
+}
+
+.even {
+  float: right;
+  border-radius: 20px 0px 20px 20px;
+  text-align: right;
+  font-size: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.even::before {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  right: -30px;
+}
+.even::after {
+  content: "";
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 2px;
+  right: -10px;
+  top: 10px;
+}
+
+.content {
+  width: 600px;
+  padding: 15px;
+  color: white;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.show {
+  opacity: 1;
+  animation: showAnimation 0.8s cubic-bezier(0.99, -0.7, 0.2, 1.9) forwards;
+}
+
+.hide {
+  opacity: 0;
+  animation: hideAnimation 0.8s cubic-bezier(0.99, -0.7, 0.2, 1.9) forwards;
+}
+
+@keyframes showAnimation {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hideAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
