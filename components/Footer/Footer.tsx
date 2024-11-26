@@ -64,7 +64,10 @@ const Footer: React.FC = () => {
 
   return (
     <footer className={styles.footer}>
-      <h2 className={styles.title}>Let’s Connect! I’d Love Your Feedback!</h2>
+      <h2 className={styles.title}>Let’s Connect! I’d Love Your Feedback!
+        <br />
+        I’m very flexible with any time zone
+      </h2>
       <form id="form" className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.field}>
           <label htmlFor="from_name" className={styles.h3}>

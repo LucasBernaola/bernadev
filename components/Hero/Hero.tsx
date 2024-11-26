@@ -16,8 +16,7 @@ export const Hero = () => {
       <ProfileCard />
       <div className={styles.textContainer}>
         <p className={styles.p}>
-          I am passionate about bringing ideas to life through innovative and
-          engaging web development.
+        I am passionate about bringing ideas to life by innovating through development.
         </p>
       </div>
     </motion.section>

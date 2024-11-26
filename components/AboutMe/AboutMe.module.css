@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  height: auto;
+  max-width: 90vw;
+  margin: 5vh auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgb(12, 12, 11);
+  position: relative;
+  background-image: url("/images/aboutme.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 30, 19, 0.5);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.title {
+  font-family: var(--font-roboto);
+  font-size: 5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s linear;
+  color: transparent;
+  background-image: linear-gradient(
+    to left,
+    white,
+    rgba(250, 237, 91, 0.854),
+    rgba(220, 210, 99, 0.9),
+    rgba(223, 213, 113, 0.5)
+  );
+  background-size: 200%;
+  animation: move 30s linear infinite;
+  background-clip: text;
+}
+
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.title:hover {
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 40px white, 0 0 80px white,
+    0 0 160px white, 0 0 320px white;
+}
+
+.title,
+.p,
+.img {
+  position: relative;
+  z-index: 2;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.p {
+  max-width: 50rem;
+  font-size: 1.3rem;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    height: auto;
+    max-width: 95vw;
+    background-position: 80% center;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./TechStack.module.css";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
 
 interface Technology {
   name: string;
@@ -17,65 +15,55 @@ const technologies: Technology[] = [
   {
     name: "JavaScript",
     icon: "/images/javascript.svg",
-    description: "JavaScript is a versatile, high-level programming language essential for building interactive and dynamic web content. It enables everything from responsive elements on a webpage to sophisticated web applications, making it the backbone of modern web development.",
+    description:
+      "JavaScript is a versatile, high-level programming language essential for building interactive and dynamic web content. It enables everything from responsive elements on a webpage to sophisticated web applications, making it the backbone of modern web development.",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "TypeScript",
     icon: "/images/typescript.svg",
-    description: "TypeScript is a statically typed superset of JavaScript that enhances code quality and maintainability. By introducing static types, TypeScript helps catch errors at compile time, making large-scale applications more reliable and easier to refactor.",
+    description:
+      "TypeScript is a statically typed superset of JavaScript that enhances code quality and maintainability. By introducing static types, TypeScript helps catch errors at compile time, making large-scale applications more reliable and easier to refactor.",
     link: "https://www.typescriptlang.org/",
   },
   {
     name: "React",
     icon: "/images/react.svg",
-    description: "A powerful JavaScript library for building efficient and dynamic user interfaces. It utilizes a component-based architecture and a virtual DOM, allowing for fast rendering and a modular development approach, ideal for complex web applications.",
+    description:
+      "A powerful JavaScript library for building efficient and dynamic user interfaces. It utilizes a component-based architecture and a virtual DOM, allowing for fast rendering and a modular development approach, ideal for complex web applications.",
     link: "https://reactjs.org/",
   },
   {
     name: "Next.js",
     icon: "/images/nextjs.svg",
-    description: "Next.js is a production-ready React framework that simplifies building server-rendered applications. It offers features like static site generation, API routes, and server-side rendering, making it a powerful tool for developing performant and SEO-friendly applications.",
+    description:
+      "Next.js is a production-ready React framework that simplifies building server-rendered applications. It offers features like static site generation, API routes, and server-side rendering, making it a powerful tool for developing performant and SEO-friendly applications.",
     link: "https://nextjs.org/",
   },
   {
     name: "Vue.js",
     icon: "/images/vuejs.svg",
-    description: "Vue.js is a progressive JavaScript framework designed for building user interfaces with ease. Its approachable design and reactive data-binding make it a popular choice for developers looking for a balance between simplicity and performance in front-end development.",
+    description:
+      "Vue.js is a progressive JavaScript framework designed for building user interfaces with ease. Its approachable design and reactive data-binding make it a popular choice for developers looking for a balance between simplicity and performance in front-end development.",
     link: "https://vuejs.org/",
   },
   {
     name: "Python",
     icon: "/images/python.svg",
-    description: "Python is a high-level, general-purpose programming language known for its readability and efficiency. Its clear syntax and vast library ecosystem make it an ideal choice for everything from web development to data science and artificial intelligence.",
+    description:
+      "Python is a high-level, general-purpose programming language known for its readability and efficiency. Its clear syntax and vast library ecosystem make it an ideal choice for everything from web development to data science and artificial intelligence.",
     link: "https://www.python.org/",
   },
   {
     name: "Django",
     icon: "/images/django.svg",
-    description: "Django is a high-level Python web framework that promotes rapid development and clean, pragmatic design. It includes an array of built-in features like an ORM, admin panel, and security measures, making it a popular choice for building robust and scalable web applications.",
+    description:
+      "Django is a high-level Python web framework that promotes rapid development and clean, pragmatic design. It includes an array of built-in features like an ORM, admin panel, and security measures, making it a popular choice for building robust and scalable web applications.",
     link: "https://www.djangoproject.com/",
   },
 ];
 
 const TechStack = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
-      });
-    }
-  }, [controls, inView]);
-
   const [activeTech, setActiveTech] = useState<Technology>(technologies[0]);
   const [fade, setFade] = useState<boolean>(false);
 
@@ -90,18 +78,17 @@ const TechStack = () => {
   };
 
   return (
-    <motion.div
-      ref={ref}
-      className={styles.container}
-      initial={{ opacity: 0, scale: 0.8, y: 50 }}
-      animate={controls}
-    >
-      <h2 className={styles.title}>My Tech Stack</h2>
+    <section className={`${styles.container} ${styles.gradientBackground}`} id="TechStack">
+      <div className={styles.titleContainer}>
+        <h2 className={styles.title}>My Tech Stack</h2>
+      </div>
       <div className={styles.iconContainer}>
         {technologies.map((tech, index) => (
           <button
             key={index}
-            className={`${styles.iconButton} ${activeTech.name === tech.name ? styles.active : ""}`}
+            className={`${styles.iconButton} ${
+              activeTech.name === tech.name ? styles.active : ""
+            }`}
             onClick={() => handleTechClick(tech)}
             aria-label={tech.name}
           >
@@ -127,9 +114,8 @@ const TechStack = () => {
           Learn More
         </a>
       </div>
-    </motion.div>
+    </section>
   );
 };
 
 export default TechStack;
-

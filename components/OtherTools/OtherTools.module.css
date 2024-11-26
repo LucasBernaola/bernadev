@@ -1,20 +1,52 @@
 .toolsSection {
-  padding: 40px;
+  padding: 50px;
   text-align: center;
-  background: linear-gradient(to bottom, #21496e, #0077b5);
+  min-height: 90vh;
+  margin-bottom: 50px;
+}
+
+.titleContainer {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: var(--primary-color);
-  text-decoration: underline;
+  font-family: var(--font-roboto);
+  font-size: 5rem;
+  margin: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s linear;
+  color: transparent;
+  background-image:  linear-gradient(to left, white, rgba(255, 255, 255, 0.936), #035f90, #0c90aa);
+  background-size: 200%;
+  animation: move 30s linear infinite;
+  background-clip: text;
+}
+
+@keyframes move {
+  100% {
+    background-position: 2000px 0;
+  }
+}
+
+.title:hover{
+  color: white;
+  text-shadow: 0 0 10px white,
+               0 0 20px white,
+               0 0 40px white,
+               0 0 80px white,
+               0 0 160px white,
+               0 0 320px white;
 }
 
 .toolsContainer {
   display: flex;
   justify-content: center;
-  gap: 30px 5px;
+  padding: 30px;
+  gap: 50px 10px;
   flex-wrap: wrap;
 }
 
@@ -52,39 +84,33 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .tool {
-    width: calc(100% / 6 - 40px);
+@media (max-width: 768px) {
+  .toolsContainer {
+    gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
   }
 
   .toolName {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .tool {
-    width: calc(100% / 6 - 40px);
-  }
-  .toolName {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .tool {
-    width: calc(100% / 6 - 20px);
-  }
-  .toolName {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .tool {
-    width: calc(100% / 4 - 20px);
+  .toolsContainer {
+    gap: 80px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .toolName {
-    font-size: 0.95rem;
+
+  .title {
+    font-size: 2.5rem;
   }
 }

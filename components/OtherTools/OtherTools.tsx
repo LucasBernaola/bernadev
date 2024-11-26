@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import styles from './OtherTools.module.css';
-import Image from 'next/image';
+import React, { useEffect } from "react";
+import styles from "./OtherTools.module.css";
+import Image from "next/image";
 
 const tools = [
   { name: "HTML5", icon: "/images/html5.svg" },
@@ -20,31 +20,35 @@ const tools = [
 ];
 
 const OtherTools: React.FC = () => {
-
-    useEffect(() => {
-        const icons = document.querySelectorAll(`.${styles.icon}`);
-        icons.forEach((icon) => {
-          const randomDelay = Math.random() * 2;
-          (icon as HTMLElement).style.animationDelay = `${randomDelay}s`;
-        });
-      }, []);
-      
+  useEffect(() => {
+    const icons = document.querySelectorAll(`.${styles.icon}`);
+    icons.forEach((icon) => {
+      const randomDelay = Math.random() * 2;
+      (icon as HTMLElement).style.animationDelay = `${randomDelay}s`;
+    });
+  }, []);
 
   return (
-    <div className={styles.toolsSection}>
-      <h1 className={styles.title}>My Toolbox</h1>
+    <section className={styles.toolsSection} id="OtherTools">
+      <div className={styles.titleContainer}>
+        <h2 className={styles.title}>My Toolbox</h2>
+      </div>
       <div className={styles.toolsContainer}>
         {tools.map((tool, index) => (
           <div key={index} className={styles.tool}>
-            <Image src={tool.icon} alt={`${tool.name} icon`} className={styles.icon} width={60} height={60}/>
+            <Image
+              src={tool.icon}
+              alt={`${tool.name} icon`}
+              className={styles.icon}
+              width={60}
+              height={60}
+            />
             <p className={styles.toolName}>{tool.name}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
 export default OtherTools;
-
-

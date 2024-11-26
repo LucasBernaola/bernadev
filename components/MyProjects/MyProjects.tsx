@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import styles from "./MyProjects.module.css";
@@ -19,22 +17,18 @@ const projects = [
   },
   {
     title: "GPT-3",
-    description: "A modern landing page of innovation technology.",
+    description: "A modern landing page of innovative technology.",
     image: "/images/p3.png",
     url: "https://chat-gpt-3-landing-page-oz8h5z1ii-lucas-projects-1b3e6bc3.vercel.app/",
-  },
-  {
-    title: "To-Do App",
-    description: "A simple to-do app to manage your tasks effectively.",
-    image: "/images/p4.png",
-    url: "https://to-do-app-kohl-iota.vercel.app/",
   },
 ];
 
 const MyProjects: React.FC = () => {
   return (
-    <div className={styles.projectsSection}>
-      <h2 className={styles.title}>My Projects</h2>
+    <section className={styles.projectsSection} id="MyProjects">
+      <div className={styles.titleContainer}>
+        <h2 className={styles.title}>Projects</h2>
+      </div>
       <div className={styles.cardContainer}>
         {projects.map((project, index) => (
           <a
@@ -49,7 +43,7 @@ const MyProjects: React.FC = () => {
             <div className={styles.imageContainer}>
               <Image
                 src={project.image}
-                alt={`${project.title} thumbnail`}
+                alt={`Thumbnail of ${project.title}`}
                 width={400}
                 height={200}
                 className={styles.projectImage}
@@ -62,8 +56,9 @@ const MyProjects: React.FC = () => {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
 export default MyProjects;
+

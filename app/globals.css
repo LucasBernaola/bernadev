@@ -2,15 +2,10 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 :root {
-  --background: #21496e;
   --foreground: #ffffff;
   --primary-color: #0077b5;
   --font-quicksand: "Quicksand", sans-serif;
-  --font-roboto: "Roboto_condensed";
-
-  --breakpoint-mobile: 480px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 1024px;
+  --font-roboto: "Roboto Condensed", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -19,25 +14,52 @@
 
 html {
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
-
-html,
-body {
+html, body {
   max-width: 100vw;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
 
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #21496e, #036396, #16305e, #59b9d6);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 a {
