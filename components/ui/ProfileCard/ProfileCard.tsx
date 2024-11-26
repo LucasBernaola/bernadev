@@ -47,7 +47,7 @@ const ProfileCard = () => {
           >
             <FaGithub className={styles.icon} />
           </a>
-          <a href="/cv.pdf" download className={styles.downloadButton}>
+          <a href="/CVen.pdf" download className={styles.downloadButton}>
             Download CV
           </a>
         </div>

@@ -17,6 +17,7 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   title: "bernadev",
   description: "My personal portfolio",
+  viewport: "width=device-width, initial-scale=0.1",
 };
 
 export default function RootLayout({
@@ -26,9 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
       <body className={`${roboto.className} ${quicksand.className}`}>
         {children}
       </body>

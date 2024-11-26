@@ -31,7 +31,7 @@
 
 .title {
   font-family: var(--font-roboto);
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s linear;
@@ -81,7 +81,7 @@
   max-width: 50rem;
   font-size: 1.3rem;
   text-align: justify;
-  margin-top: 20px;
+  margin-top: -60px;
 }
 
 @media (max-width: 768px) {

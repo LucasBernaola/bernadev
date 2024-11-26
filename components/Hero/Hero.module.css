@@ -5,7 +5,7 @@
   justify-content: center;
   gap: 20px;
   padding: 40px;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 95vw;
   margin: 5vh auto;
   border-radius: 20px;

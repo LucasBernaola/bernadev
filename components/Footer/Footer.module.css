@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   position: relative;
   text-align: center;
-  padding: 50px;
+  padding: 10px;
   height: auto;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   color: #54acdb;
   font-weight: bold;
@@ -53,14 +53,14 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .button {
   padding: 10px 20px;
   background-color: var(--primary-color);
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: 5px;
@@ -108,7 +108,7 @@
 
 .icon {
   color: #eae8e8;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 
@@ -125,7 +125,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .downloadButton:hover {
@@ -135,7 +135,7 @@
 .copyright {
   color: var(--foreground);
   margin-left: auto;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 480px) {
