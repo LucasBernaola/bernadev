@@ -1,17 +1,17 @@
 import { Metadata } from "next";
-import { Roboto_Condensed, Quicksand } from 'next/font/google';
+import { Roboto_Condensed, Quicksand } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto_Condensed({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
 });
 
 const quicksand = Quicksand({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -26,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${roboto.className} ${quicksand.className}`}>
         {children}
       </body>
