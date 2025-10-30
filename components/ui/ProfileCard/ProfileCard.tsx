@@ -22,7 +22,7 @@ const ProfileCard = () => {
           I’m Lucas, <br />
           <span style={{ color: "#0077b5" }}>
             <Typewriter
-              words={["Frontend Developer"]}
+              words={["Web Developer"]}
               loop={0}
               cursor
               cursorStyle="|"
