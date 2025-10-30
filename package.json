@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postinstall": "npx update-browserslist-db@latest --yes",
     "start": "next start",
     "lint": "next lint"
   },
@@ -35,6 +36,8 @@
     "@types/react-modal": "^3.16.3",
     "@types/react-slick": "^0.23.13",
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "browserslist": "^4.27.0",
+    "caniuse-lite": "^1.0.30001751",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "identity-obj-proxy": "^3.0.0",
