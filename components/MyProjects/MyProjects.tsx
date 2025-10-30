@@ -4,7 +4,7 @@ import styles from "./MyProjects.module.css";
 
 const projects = [
   {
-    title: "Medical Care Plus",
+    title: "Health Care Plus",
     description: "Web platform for modern medical management.",
     image: "/images/p5.png",
     url: "https://medical-care-frontend.vercel.app/",
