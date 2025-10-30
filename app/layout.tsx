@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Roboto_Condensed, Quicksand } from "next/font/google";
 import "./globals.css";
 
