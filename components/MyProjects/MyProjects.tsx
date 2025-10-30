@@ -4,6 +4,12 @@ import styles from "./MyProjects.module.css";
 
 const projects = [
   {
+    title: "Medical Care Plus",
+    description: "Web platform for modern medical management.",
+    image: "/images/p5.png",
+    url: "https://medical-care-frontend.vercel.app/",
+  },
+  {
     title: "HooBank",
     description: "A banking website with modern design and functionality.",
     image: "/images/p1.png",
@@ -11,13 +17,13 @@ const projects = [
   },
   {
     title: "Restaurant",
-    description: "A restaurant landing page showcasing delicious dishes.",
+    description: "Restaurant landing page showcasing delicious dishes.",
     image: "/images/p2.png",
     url: "https://restaurant-landingpage-pi.vercel.app/",
   },
   {
     title: "GPT-3",
-    description: "A modern landing page of innovative technology.",
+    description: "Modern landing page of innovative technology.",
     image: "/images/p3.png",
     url: "https://chat-gpt-3-landing-page-oz8h5z1ii-lucas-projects-1b3e6bc3.vercel.app/",
   },
@@ -61,4 +67,3 @@ const MyProjects: React.FC = () => {
 };
 
 export default MyProjects;
-
