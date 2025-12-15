@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import { Roboto_Condensed, Quicksand } from "next/font/google";
 import "./globals.css";
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
   description: "My personal portfolio",
 };
 
-// Nota: el viewport va aparte
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
