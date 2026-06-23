@@ -1,22 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto_Condensed, Quicksand } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const roboto = Roboto_Condensed({
-  weight: ["400", "700"],
-  style: ["normal"],
-  subsets: ["latin"],
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
 });
 
-const quicksand = Quicksand({
-  weight: ["400", "700"],
-  style: ["normal"],
-  subsets: ["latin"],
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
-  title: "bernadev",
-  description: "My personal portfolio",
+  title: "Lucas Bernaola | Frontend Developer",
+  description:
+    "Frontend portfolio focused on React, Next.js, TypeScript and product-style web interfaces.",
 };
 
 export const viewport: Viewport = {
@@ -29,7 +30,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${quicksand.className}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
