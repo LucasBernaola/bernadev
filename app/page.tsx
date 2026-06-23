@@ -198,26 +198,48 @@ export default function Home() {
           <p>{copy.projects.description}</p>
         </div>
         <div className={styles.projectCards}>
-          {copy.projects.items.map((project) => (
-            <a
-              className={styles.projectCard}
-              key={project.title}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={project.image}
-                alt={`${project.title} project preview`}
-                width={460}
-                height={280}
-                className={styles.projectCardImage}
-              />
-              <span>UI practice</span>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-            </a>
-          ))}
+          {copy.projects.items.map((project) => {
+            const projectBody = (
+              <>
+                <Image
+                  src={project.image}
+                  alt={`${project.title} project preview`}
+                  width={460}
+                  height={280}
+                  className={styles.projectCardImage}
+                />
+                <div className={styles.projectCardBody}>
+                  <div className={styles.projectCardMeta}>
+                    <span>{project.badge}</span>
+                    <strong>{project.status}</strong>
+                  </div>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className={styles.projectMiniStack}>
+                    {project.stack.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                </div>
+              </>
+            );
+
+            return "url" in project ? (
+              <a
+                className={styles.projectCard}
+                key={project.title}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {projectBody}
+              </a>
+            ) : (
+              <article className={styles.projectCard} key={project.title}>
+                {projectBody}
+              </article>
+            );
+          })}
         </div>
       </section>
 

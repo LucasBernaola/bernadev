@@ -114,28 +114,38 @@ export const content = {
       ],
     },
     projects: {
-      eyebrow: "Selected UI Work",
-      title: "Landing pages and interface practice",
+      eyebrow: "Next project cards",
+      title: "Other projects to shape into case studies",
       description:
-        "Secondary projects focused on layout accuracy, responsive implementation and translating visual references into working interfaces.",
+        "A compact preview of the projects that can support Health Care Plus without making the homepage feel endless.",
       items: [
         {
-          title: "HooBank",
-          description: "Banking landing page focused on modern layout and responsive sections.",
-          image: "/images/p1.png",
-          url: "https://bank-landingpage-three.vercel.app/",
+          title: "Technical Service System",
+          badge: "Product UI mock",
+          status: "Draft",
+          description:
+            "Planned management interface for repair orders, customers, device status and service follow-up workflows.",
+          image: "/images/p4.png",
+          stack: ["React", "Next.js", "TypeScript"],
         },
         {
-          title: "Restaurant",
-          description: "Restaurant landing page with product-focused imagery and clear content blocks.",
-          image: "/images/p2.png",
-          url: "https://restaurant-landingpage-pi.vercel.app/",
+          title: "Software Development Website",
+          badge: "Personal web",
+          status: "Draft",
+          description:
+            "Professional website concept for presenting software development services, process, projects and contact flows.",
+          image: "/images/p5.png",
+          stack: ["Next.js", "Responsive UI", "SEO"],
         },
         {
-          title: "GPT-3",
-          description: "Technology landing page practice with component-based structure.",
+          title: "Landing Page Practice",
+          badge: "UI practice",
+          status: "Live",
+          description:
+            "A small collection of landing pages used to practice visual accuracy, reusable sections and responsive behavior.",
           image: "/images/p3.png",
           url: "https://chat-gpt-3-landing-page-oz8h5z1ii-lucas-projects-1b3e6bc3.vercel.app/",
+          stack: ["React", "CSS", "Vercel"],
         },
       ],
     },
@@ -308,28 +318,38 @@ export const content = {
       ],
     },
     projects: {
-      eyebrow: "UI Work Seleccionado",
-      title: "Landing pages y practica de interfaces",
+      eyebrow: "Proximas cards de proyectos",
+      title: "Otros proyectos para convertir en casos",
       description:
-        "Proyectos secundarios enfocados en precision visual, responsive design y conversion de referencias visuales en interfaces funcionales.",
+        "Una vista compacta de proyectos que pueden acompaniar a Health Care Plus sin hacer que la home se vuelva interminable.",
       items: [
         {
-          title: "HooBank",
-          description: "Landing bancaria enfocada en layout moderno y secciones responsive.",
-          image: "/images/p1.png",
-          url: "https://bank-landingpage-three.vercel.app/",
+          title: "Sistema de Servicio Tecnico",
+          badge: "Mock de producto",
+          status: "Borrador",
+          description:
+            "Interfaz planificada para ordenes de reparacion, clientes, estado de equipos y seguimiento de servicios.",
+          image: "/images/p4.png",
+          stack: ["React", "Next.js", "TypeScript"],
         },
         {
-          title: "Restaurant",
-          description: "Landing de restaurante con imagenes protagonistas y bloques de contenido claros.",
-          image: "/images/p2.png",
-          url: "https://restaurant-landingpage-pi.vercel.app/",
+          title: "Web de Desarrollo de Software",
+          badge: "Web personal",
+          status: "Borrador",
+          description:
+            "Concepto de sitio profesional para presentar servicios de desarrollo, proceso, proyectos y contacto.",
+          image: "/images/p5.png",
+          stack: ["Next.js", "Responsive UI", "SEO"],
         },
         {
-          title: "GPT-3",
-          description: "Practica de landing tecnologica con estructura basada en componentes.",
+          title: "Practica de Landing Pages",
+          badge: "Practica UI",
+          status: "Live",
+          description:
+            "Coleccion pequena de landings para practicar precision visual, secciones reutilizables y comportamiento responsive.",
           image: "/images/p3.png",
           url: "https://chat-gpt-3-landing-page-oz8h5z1ii-lucas-projects-1b3e6bc3.vercel.app/",
+          stack: ["React", "CSS", "Vercel"],
         },
       ],
     },
