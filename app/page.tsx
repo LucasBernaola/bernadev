@@ -4,6 +4,7 @@ import Image from "next/image";
 import { type ReactNode, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiNextdotjs, SiReact, SiTypescript, SiVuedotjs } from "react-icons/si";
+import { ProjectCard } from "@/components/ProjectCard/ProjectCard";
 import { content, type Locale } from "./content";
 import styles from "./page.module.css";
 
@@ -193,53 +194,14 @@ export default function Home() {
 
       <section className={styles.splitSection}>
         <div className={styles.sectionIntro}>
-          <p className={styles.eyebrow}>{copy.projects.eyebrow}</p>
+          {copy.projects.eyebrow ? <p className={styles.eyebrow}>{copy.projects.eyebrow}</p> : null}
           <h2>{copy.projects.title}</h2>
           <p>{copy.projects.description}</p>
         </div>
         <div className={styles.projectCards}>
-          {copy.projects.items.map((project) => {
-            const projectBody = (
-              <>
-                <Image
-                  src={project.image}
-                  alt={`${project.title} project preview`}
-                  width={460}
-                  height={280}
-                  className={styles.projectCardImage}
-                />
-                <div className={styles.projectCardBody}>
-                  <div className={styles.projectCardMeta}>
-                    <span>{project.badge}</span>
-                    <strong>{project.status}</strong>
-                  </div>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className={styles.projectMiniStack}>
-                    {project.stack.map((item) => (
-                      <span key={item}>{item}</span>
-                    ))}
-                  </div>
-                </div>
-              </>
-            );
-
-            return "url" in project ? (
-              <a
-                className={styles.projectCard}
-                key={project.title}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {projectBody}
-              </a>
-            ) : (
-              <article className={styles.projectCard} key={project.title}>
-                {projectBody}
-              </article>
-            );
-          })}
+          {copy.projects.items.map((project) => (
+            <ProjectCard project={project} key={project.title} />
+          ))}
         </div>
       </section>
 
@@ -247,12 +209,15 @@ export default function Home() {
         <div className={styles.sectionIntro}>
           <p className={styles.eyebrow}>{copy.skills.eyebrow}</p>
           <h2>{copy.skills.title}</h2>
+          <p>{copy.skills.description}</p>
         </div>
         <div className={styles.skillGrid}>
           {copy.skills.groups.map((group) => (
-            <article className={styles.card} key={group.title}>
+            <article className={styles.skillCard} key={group.title}>
+              <span>{group.label}</span>
               <h3>{group.title}</h3>
-              <div className={styles.badges}>
+              <p>{group.description}</p>
+              <div className={styles.skillTools}>
                 {group.items.map((item) => (
                   <span key={item}>{item}</span>
                 ))}
@@ -266,6 +231,7 @@ export default function Home() {
         <div className={styles.sectionIntro}>
           <p className={styles.eyebrow}>{copy.experience.eyebrow}</p>
           <h2>{copy.experience.title}</h2>
+          <p>{copy.experience.description}</p>
         </div>
         <div className={styles.timeline}>
           {copy.experience.items.map((item) => (
@@ -274,30 +240,27 @@ export default function Home() {
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
+                <ul className={styles.timelinePoints}>
+                  {item.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className={styles.labSection}>
-        <div>
-          <p className={styles.eyebrow}>{copy.lab.eyebrow}</p>
-          <h2>{copy.lab.title}</h2>
-        </div>
-        <div className={styles.labItems}>
-          {copy.lab.items.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-      </section>
-
       <footer className={styles.footer} id="contact">
-        <div>
-          <h2>{copy.contact.title}</h2>
+        <div className={styles.footerCopy}>
+          <h2>{copy.contact.name}</h2>
+          <span>{copy.contact.role}</span>
           <p>{copy.contact.description}</p>
         </div>
         <div className={styles.footerActions}>
+          <a href="mailto:lucasbernaola15@gmail.com" className={styles.primaryAction}>
+            {copy.contact.email}
+          </a>
           <a
             href="https://www.linkedin.com/in/lucas-bernaola/"
             target="_blank"

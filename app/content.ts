@@ -114,10 +114,10 @@ export const content = {
       ],
     },
     projects: {
-      eyebrow: "Next project cards",
-      title: "Other projects to shape into case studies",
+      eyebrow: "",
+      title: "Other developed projects",
       description:
-        "A compact preview of the projects that can support Health Care Plus without making the homepage feel endless.",
+        "Additional work focused on product interfaces, responsive layouts and practical frontend implementation.",
       items: [
         {
           title: "Technical Service System",
@@ -151,58 +151,81 @@ export const content = {
     },
     skills: {
       eyebrow: "Technical Skills",
-      title: "Tools I use to build frontend products",
+      title: "Frontend, integration and delivery",
+      description:
+        "My main focus is frontend development, but I also have practical experience connecting interfaces with REST APIs, Django backends and PostgreSQL data models.",
       groups: [
         {
-          title: "Frontend",
-          items: ["React", "Next.js", "TypeScript", "JavaScript", "CSS Modules"],
+          label: "Core",
+          title: "Frontend Development",
+          description:
+            "Responsive interfaces, reusable components and product experiences built with clarity, performance and maintainability in mind.",
+          items: ["React", "Next.js", "TypeScript", "Vue 3"],
         },
         {
-          title: "Product UI",
-          items: ["Responsive design", "Reusable components", "Accessibility basics"],
+          label: "Integration",
+          title: "Backend Context",
+          description:
+            "Practical experience connecting frontend applications with REST APIs, forms, validation flows and persisted data.",
+          items: ["Django REST Framework", "PostgreSQL", "REST APIs"],
         },
         {
+          label: "Delivery",
           title: "Workflow",
-          items: ["Git", "GitHub", "Vercel", "API consumption"],
+          description:
+            "Version control, deployment and environment tools used to move projects from local development to production.",
+          items: ["Git", "GitHub", "Vercel", "Docker"],
         },
       ],
     },
     experience: {
       eyebrow: "Experience",
-      title: "Practical training and project work",
+      title: "Practical experience",
+      description:
+        "Applied experience across team-based development, freelance projects and collaborative work environments.",
       items: [
         {
-          title: "Freelance Web Development",
-          meta: "2025",
+          title: "Frontend / Full Stack Trainee",
+          meta: "Startup project - Mar to Oct 2023",
           description:
-            "Independent web work for companies and entrepreneurs, combining interface development with practical delivery.",
+            "Trainee role in an early-stage product team, working with a senior Python developer and collaborating across product, UX/UI and development. Contributed to the existing WordPress platform while supporting the transition toward a custom solution with Django and React foundations.",
+          points: [
+            "Worked on frontend planning, UI/UX alignment and API integration requirements",
+            "Practiced real team workflows with Scrum, sprints, pull requests and code review",
+            "Built practical understanding of Django backends and how frontend applications consume product data",
+          ],
         },
         {
-          title: "Ademass Developer Training",
-          meta: "Apr - May 2024",
+          title: "Freelance Web Developer",
+          meta: "Freelance project - 2025",
           description:
-            "Team practice building a web application while working with communication, planning and shared responsibilities.",
+            "Developed a freelance website for a cellphone repair service, working directly with the client to understand requirements, adjust content and iterate on the interface.",
+          points: [
+            "Handled client communication, feedback and requested changes",
+            "Delivered a functional web project based on a real business need",
+          ],
         },
         {
-          title: "No Country Work Simulation",
-          meta: "Mar - Apr 2024",
+          title: "Collaborative Development Practice",
+          meta: "No Country / Ademass - 2024",
           description:
-            "Collaborative e-commerce project focused on product workflows, teamwork and agile practice.",
+            "Participated in collaborative learning teams and work simulations, building projects with other developers and practicing team delivery.",
+          points: [
+            "Practiced task planning, team communication and shared responsibilities",
+            "Strengthened work methodology, communication, coordination and feedback skills",
+          ],
         },
       ],
     },
-    lab: {
-      eyebrow: "Learning Lab",
-      title: "Focused practice without losing the job-search focus",
-      items: ["JavaScript problem solving", "React patterns", "API integration"],
-    },
     contact: {
-      title: "Let's build something useful.",
+      name: "Lucas Bernaola",
+      role: "Frontend Developer",
       description:
-        "I am looking for frontend opportunities where I can contribute, keep learning and grow with a real team.",
+        "Available for frontend positions and remote projects. Comfortable collaborating with distributed teams across different time zones.",
       linkedin: "LinkedIn",
       github: "GitHub",
       cv: "Download CV",
+      email: "Email",
     },
   },
   es: {
@@ -230,13 +253,13 @@ export const content = {
       showcaseLabel: "Producto destacado",
       showcaseStatus: "Demo online",
       showcaseTitle: "Health Care Plus",
-      showcaseDescription: "Flujos medicos, pacientes y pantallas administrativas.",
+      showcaseDescription: "Flujos médicos, pacientes y pantallas administrativas.",
     },
     featured: {
       eyebrow: "Caso de estudio Health Care Plus",
-      title: "Health Care Plus - Sistema de gestion para pacientes y turnos medicos.",
+      title: "Health Care Plus - Sistema de gestión para pacientes y turnos médicos.",
       description:
-        "Aplicacion web pensada para simplificar la gestion basica de pacientes y turnos en centros medicos, construida con una arquitectura real de frontend y backend.",
+        "Aplicación web pensada para simplificar la gestión básica de pacientes y turnos en centros médicos, construida con una arquitectura real de frontend y backend.",
       demo: "Ver Demo",
       repo: "Perfil GitHub",
       galleryLabel: "Pantallas del producto",
@@ -244,7 +267,7 @@ export const content = {
       hostingNote:
         "La demo online puede tener persistencia limitada por el hosting gratuito del backend. Las capturas muestran el flujo pensado y el alcance del producto.",
       roleLabel: "Rol",
-      role: "Desarrollo full-stack del proyecto, arquitectura frontend, integracion con API REST e implementacion responsive",
+      role: "Desarrollo full-stack del proyecto, arquitectura frontend, integración con API REST e implementación responsive",
       stackLabel: "Stack",
       stack: [
         "Vue 3",
@@ -262,7 +285,7 @@ export const content = {
             "Manejo de estado global con Pinia",
             "Arquitectura basada en componentes reutilizables",
             "Consumo de API REST con estados de carga y error",
-            "Formularios controlados y validaciones basicas",
+            "Formularios controlados y validaciones básicas",
           ],
         },
         {
@@ -271,8 +294,8 @@ export const content = {
             "API REST desarrollada con Django REST Framework",
             "Entidades reales: usuarios, pacientes y turnos",
             "Serializers para controlar datos de entrada y salida",
-            "Logica de negocio centralizada en el backend",
-            "Conexion a base de datos PostgreSQL",
+            "Lógica de negocio centralizada en el backend",
+            "Conexión a base de datos PostgreSQL",
           ],
         },
         {
@@ -280,7 +303,7 @@ export const content = {
           items: [
             "Frontend desplegado y parcialmente navegable",
             "Backend y base de datos en stand-by por mantenimiento",
-            "Estructura preparada para autenticacion y crecimiento futuro",
+            "Estructura preparada para autenticación y crecimiento futuro",
           ],
         },
       ],
@@ -298,37 +321,37 @@ export const content = {
           image: "/images/health-care-plus-details.jpg",
         },
         {
-          title: "Confirmacion del turno",
+          title: "Confirmación del turno",
           image: "/images/health-care-plus-confirmation.jpg",
         },
       ],
       problemLabel: "Problema",
       problem:
-        "Los centros medicos necesitan herramientas simples para gestionar pacientes y turnos sin volver lentos los procesos cotidianos.",
-      solutionLabel: "Solucion",
+        "Los centros médicos necesitan herramientas simples para gestionar pacientes y turnos sin volver lentos los procesos cotidianos.",
+      solutionLabel: "Solución",
       solution:
-        "Construí una aplicacion funcional alrededor de flujos reales: datos del paciente, solicitud de turnos, seleccion de fecha y confirmacion.",
-      impactLabel: "Que demuestra",
+        "Construí una aplicación funcional alrededor de flujos reales: datos del paciente, solicitud de turnos, selección de fecha y confirmación.",
+      impactLabel: "Qué demuestra",
       impact:
-        "Muestra criterio de producto, estructura de componentes, integracion con API, modelado backend y capacidad para construir mas alla de interfaces estaticas.",
+        "Muestra criterio de producto, estructura de componentes, integración con API, modelado backend y capacidad para construir más allá de interfaces estáticas.",
       highlights: [
         "Frontend organizado con vistas, servicios y componentes reutilizables",
-        "Integracion con API contemplando estados de carga y error",
-        "Formularios y flujos pensados para tareas reales de gestion de turnos",
+        "Integración con API contemplando estados de carga y error",
+        "Formularios y flujos pensados para tareas reales de gestión de turnos",
       ],
     },
     projects: {
-      eyebrow: "Proximas cards de proyectos",
-      title: "Otros proyectos para convertir en casos",
+      eyebrow: "",
+      title: "Otros proyectos desarrollados",
       description:
-        "Una vista compacta de proyectos que pueden acompaniar a Health Care Plus sin hacer que la home se vuelva interminable.",
+        "Trabajos complementarios enfocados en interfaces de producto, responsive design e implementación frontend práctica.",
       items: [
         {
-          title: "Sistema de Servicio Tecnico",
+          title: "Sistema de Servicio Técnico",
           badge: "Mock de producto",
           status: "Borrador",
           description:
-            "Interfaz planificada para ordenes de reparacion, clientes, estado de equipos y seguimiento de servicios.",
+            "Interfaz planificada para órdenes de reparación, clientes, estado de equipos y seguimiento de servicios.",
           image: "/images/p4.png",
           stack: ["React", "Next.js", "TypeScript"],
         },
@@ -342,11 +365,11 @@ export const content = {
           stack: ["Next.js", "Responsive UI", "SEO"],
         },
         {
-          title: "Practica de Landing Pages",
-          badge: "Practica UI",
+          title: "Práctica de Landing Pages",
+          badge: "Práctica UI",
           status: "Live",
           description:
-            "Coleccion pequena de landings para practicar precision visual, secciones reutilizables y comportamiento responsive.",
+            "Colección pequeña de landings para practicar precisión visual, secciones reutilizables y comportamiento responsive.",
           image: "/images/p3.png",
           url: "https://chat-gpt-3-landing-page-oz8h5z1ii-lucas-projects-1b3e6bc3.vercel.app/",
           stack: ["React", "CSS", "Vercel"],
@@ -354,59 +377,82 @@ export const content = {
       ],
     },
     skills: {
-      eyebrow: "Skills Tecnicas",
-      title: "Herramientas que uso para construir productos frontend",
+      eyebrow: "Habilidades técnicas",
+      title: "Frontend, integración y entrega",
+      description:
+        "Mi foco principal es frontend, pero también tengo experiencia práctica conectando interfaces con APIs REST, backends en Django y modelos de datos en PostgreSQL.",
       groups: [
         {
-          title: "Frontend",
-          items: ["React", "Next.js", "TypeScript", "JavaScript", "CSS Modules"],
+          label: "Core",
+          title: "Desarrollo Frontend",
+          description:
+            "Interfaces responsive, componentes reutilizables y experiencias de producto construidas con foco en claridad, rendimiento y mantenimiento.",
+          items: ["React", "Next.js", "TypeScript", "Vue 3"],
         },
         {
-          title: "UI de Producto",
-          items: ["Responsive design", "Componentes reutilizables", "Bases de accesibilidad"],
+          label: "Integración",
+          title: "Contexto Backend",
+          description:
+            "Experiencia práctica conectando aplicaciones frontend con APIs REST, formularios, validaciones y datos persistidos.",
+          items: ["Django REST Framework", "PostgreSQL", "APIs REST"],
         },
         {
+          label: "Entrega",
           title: "Workflow",
-          items: ["Git", "GitHub", "Vercel", "Consumo de APIs"],
+          description:
+            "Control de versiones, deploy y herramientas de entorno para llevar proyectos desde desarrollo local hasta producción.",
+          items: ["Git", "GitHub", "Vercel", "Docker"],
         },
       ],
     },
     experience: {
       eyebrow: "Experiencia",
-      title: "Formacion practica y trabajo en proyectos",
+      title: "Experiencia práctica",
+      description:
+        "Experiencia aplicada en entornos de equipo, proyectos freelance y prácticas colaborativas de desarrollo.",
       items: [
         {
-          title: "Freelance Web Development",
-          meta: "2025",
+          title: "Frontend / Full Stack Trainee",
+          meta: "Startup project - Mar a Oct 2023",
           description:
-            "Trabajo web independiente para empresas y emprendedores, combinando desarrollo de interfaces con entregas concretas.",
+            "Rol trainee en un equipo de producto en etapa inicial, trabajando junto a un desarrollador senior de Python y colaborando entre producto, UX/UI y desarrollo. Participé sobre la plataforma existente en WordPress y en la transición hacia una solución propia con bases en Django y React.",
+          points: [
+            "Trabajé en planificación frontend, alineación UI/UX y requerimientos de integración con APIs",
+            "Practiqué flujos reales de equipo con Scrum, sprints, pull requests y revisión de código",
+            "Entendí cómo estructurar un backend en Django y conectar interfaces frontend con datos de una API",
+          ],
         },
         {
-          title: "Ademass Developer Training",
-          meta: "Abr - May 2024",
+          title: "Freelance Web Developer",
+          meta: "Proyecto freelance - 2025",
           description:
-            "Practica en equipo construyendo una aplicacion web, trabajando comunicacion, planificacion y responsabilidades compartidas.",
+            "Desarrollé un proyecto freelance para un servicio técnico de celulares, trabajando directamente con el cliente para entender necesidades, ajustar contenido e iterar sobre la interfaz.",
+          points: [
+            "Gestioné comunicación con cliente, feedback y cambios solicitados",
+            "Entregué un proyecto web funcional basado en una necesidad real de negocio",
+          ],
         },
         {
-          title: "No Country Work Simulation",
-          meta: "Mar - Abr 2024",
+          title: "Práctica de desarrollo colaborativo",
+          meta: "No Country / Ademass - 2024",
           description:
-            "Proyecto colaborativo de e-commerce enfocado en flujos de producto, trabajo en equipo y practica agil.",
+            "Participé en equipos de aprendizaje y simulación laboral, construyendo proyectos con otros desarrolladores y practicando entregas en equipo.",
+          points: [
+            "Practiqué planificación de tareas, comunicación de equipo y responsabilidades compartidas",
+            "Trabajé metodologías de equipo, comunicación, coordinación y manejo de feedback",
+          ],
         },
       ],
     },
-    lab: {
-      eyebrow: "Learning Lab",
-      title: "Practica enfocada sin perder de vista la busqueda laboral",
-      items: ["Resolucion de problemas JS", "Patrones de React", "Integracion con APIs"],
-    },
     contact: {
-      title: "Construyamos algo util.",
+      name: "Lucas Bernaola",
+      role: "Frontend Developer",
       description:
-        "Estoy buscando oportunidades frontend donde pueda aportar, seguir aprendiendo y crecer con un equipo real.",
+        "Disponible para posiciones frontend y proyectos remotos. Me adapto a equipos distribuidos y distintas zonas horarias.",
       linkedin: "LinkedIn",
       github: "GitHub",
       cv: "Descargar CV",
+      email: "Email",
     },
   },
 } as const;
